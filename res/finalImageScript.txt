@@ -1,0 +1,38 @@
+new-project 866 1440
+add-layer normal
+add-image-to-layer normal ./images/sample_image.png 0 0
+add-layer red
+add-image-to-layer red ./images/sample_image.png 433 0
+set-filter red red_filter
+add-layer green
+add-image-to-layer green ./images/sample_image.png 0 288
+set-filter green green_filter
+add-layer blue
+add-image-to-layer blue ./images/sample_image.png 433 288
+set-filter blue blue_filter
+add-layer brighten-intensity
+add-image-to-layer brighten-intensity ./images/sample_image.png 0 576
+set-filter brighten-intensity brighten_intensity
+add-layer darken-intensity
+add-image-to-layer darken-intensity ./images/sample_image.png 433 576
+set-filter darken-intensity darken_intensity
+add-layer brighten-luma
+add-image-to-layer brighten-luma ./images/sample_image.png 0 864
+set-filter brighten-luma brighten_luma
+add-layer darken-luma
+add-image-to-layer darken-luma ./images/sample_image.png 433 864
+set-filter darken-luma darken_luma
+add-layer brighten-max
+add-image-to-layer brighten-max ./images/sample_image.png 0 1152
+set-filter brighten-max brighten_max
+add-layer darken-max
+add-image-to-layer darken-max ./images/sample_image.png 433 1152
+set-filter darken-max darken_max
+add-layer brighten-screen
+add-image-to-layer brighten-screen ./images/sample_image.png 216 144
+set-filter brighten-screen brighten_screen
+add-layer inversion-difference
+add-image-to-layer inversion-difference ./images/sample_image.png 216 432
+set-filter inversion-difference inversion_difference
+save-image ./images/final_image.jpg
+quit

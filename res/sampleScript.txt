@@ -1,0 +1,57 @@
+help
+load-project testLoadSource.collage
+new-project 433 288
+add-layer image
+add-image-to-layer image ./images/sample_image.png 0 0
+set-filter image red_filter
+save-image ./images/red_image.png
+new-project 433 288
+add-layer image
+add-image-to-layer image ./images/sample_image.jpeg 0 0
+set-filter image red_filter
+save-image ./images/red_image.jpeg
+new-project 433 288
+add-layer image
+add-image-to-layer image ./images/sample_image.jpg 0 0
+set-filter image red_filter
+save-image ./images/red_image.jpg
+new-project 433 288
+add-layer image
+add-image-to-layer image ./images/sample_image.ppm 0 0
+set-filter image red_filter
+save-image ./images/red_image.ppm
+set-filter image blue_filter
+save-image ./images/blue_image.ppm
+set-filter image green_filter
+save-image ./images/green_image.ppm
+set-filter image brighten_intensity
+save-image ./images/brighten_intensity_image.ppm
+set-filter image darken_intensity
+save-image ./images/darken_intensity_image.ppm
+set-filter image brighten_luma
+save-image ./images/brighten_luma_image.ppm
+set-filter image darken_luma
+save-image ./images/darken_luma_image.ppm
+set-filter image brighten_max
+save-image ./images/brighten_max_image.ppm
+set-filter image darken_max
+save-image ./images/darken_max_image.ppm
+set-filter image normal
+save-image ./images/normal_image.ppm
+new-project 433 288
+add-layer bottom
+add-image-to-layer bottom ./images/sample_image.ppm 0 0
+add-layer top
+set-filter top inversion_difference
+add-image-to-layer top ./images/top_filter.ppm 0 0
+save-project scriptProject.collage
+new-project 300 300
+add-layer layer
+save-image ./images/empty.ppm
+load-project scriptProject.collage
+save-image ./images/inversion_difference_image.ppm
+set-filter top darken_multiply
+save-image ./images/darken_multiply_image.ppm
+set-filter top brighten_screen
+save-image ./images/brighten_screen_image.ppm
+quit
